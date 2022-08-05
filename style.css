@@ -1,0 +1,256 @@
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  
+  .reveal.active {
+    opacity: 1;
+  }
+
+  .active.fadeToTop{
+    animation: fade-top 1s ease-in;
+  }
+  .scrolling{
+    overflow:hidden;
+    width: 100%;
+    
+    
+  }
+  .scrolling-text{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 36px;
+    overflow: hidden;
+    
+  }
+  .scrolling-text > *{
+    display: inline-block;
+  animation: slide-right 20s infinite linear;
+  }
+  .active.slideDown{
+    animation:slide-down 1s ease-in;
+  }
+
+  .fade-to-down{
+    animation:fade-down 1s ease-in;
+  }
+
+
+  .fade-to-top{
+    animation: fade-top 1s ease-in;
+  }
+  /* .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }*/
+  .active.fadeToRight {
+    animation: fade-right 1s ease-in;
+  } 
+  @keyframes fade-top {
+    0% {
+      transform: translateY(50px);
+      /* opacity: 0; */
+    }
+    100% {
+      transform: translateY(0);
+      /* opacity: 1; */
+    }
+  }
+
+  @keyframes fade-right {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(3135px);}
+   
+   
+  }
+  /* @keyframes slide-down {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  } */
+
+  .lines{
+    position:relative;
+    right:120px;
+  }
+ .horizontal{
+   position:relative;
+    
+  }
+  .horizontal::before{
+    position:absolute;
+    content:"";
+    background-color:black;
+    height:2px;
+    width:0px;
+    transition:all 1s linear;
+    opacity:0;
+   
+  }
+  .active.horizontal::before{
+    width:150px;
+    opacity:1;
+  }
+  .vertical{
+    position:relative;  
+
+  }
+ .vertical::before{
+    position:absolute;
+    content:"";
+    left:77px;
+    top:-75px;
+    background-color:black;
+    height:2px;
+    width:0px;
+    transform:rotate(90deg);
+    transition:all 1s linear;
+  }
+  .active.vertical::before{
+    width:150px;
+    opacity:1;
+  }
+  .cross{
+    position:relative;
+  }
+  .cross::before{
+    position:absolute;
+    content:"";
+    background-color:black;
+    left:-62px;
+    top:-91px;
+    height:2px;
+    width:0px;
+    transform:rotate(45deg);
+    opacity:0;
+    transition:all 1s linear;
+  }
+  .active.cross::before{
+    width:250px;
+    opacity:1;
+  }
+  .journey-para{
+    position:relative;
+    font-size:25px;
+    font-weight:bold;
+  }
+  .journey-para::before{
+    position:absolute;
+    content:"";
+    background-color:black;
+    /* left:-62px;
+    top:-91px; */
+    height:2px;
+    width:0px;
+
+    transition:all 1.5s linear;
+  }
+  .journey-para::after{
+    position:absolute;
+    content:"";
+    background-color:black;
+    right:0px;
+    top:230px;
+    height:2px;
+    width:0px;
+
+    transition:all 1.5s linear;
+  }
+  
+  .active.journey-para::before{
+    width:100%;
+  }
+  .active.journey-para::after{
+    width:100%;
+  }
+  .boardImg{
+    position: sticky;
+    top: 50px;
+    
+  }
+  .count{
+    font-size:100px;
+  }
+  .knox-img{
+    width:500px;
+    height:500px;
+  }
+  .img-container{
+    position:relative;
+  }
+  .arrow-card{
+    position:absolute;
+    right:80px;
+    bottom:20px;
+    height:80px;
+    width:80px;
+    background-color: #ffffff;
+  }
+  /* .arrow-container{
+    position:relative;
+  } */
+  .arrow{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:20px;
+    height:20px;
+  }
+  .active.slideToBottom{
+    animation:slide-bottom 1s ease-in;
+  }
+ @keyframes slide-bottom{
+   0%{
+     transform:translate(-50px,-50px);
+     opacity:0;
+   }
+   100%{
+     transform:translate(0,0);
+     opacity:1;
+   }
+ }
+ .news-vertical{
+   position:relative;
+ }
+ .news-vertical::before{
+  position:absolute;
+  content:"";
+  top:50px;
+  left:486px;
+  text-align: center;
+  background-color:black;
+  height:2px;
+  width:0px;
+  transform:rotate(90deg);
+  transition:all 1s linear;
+ }
+ .active.news-vertical::before{
+  width:100px;
+ }
